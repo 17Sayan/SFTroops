@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="parent bubbling effect">
+        <div class="slds-m-around_medium">
+            <div class="parent-section" onshow={showHandler}>
+                <p>i am parent component</p>
+                <template if:true={showNotification}>
+                    <div class="notification box">
+                        <span>notification from child bubbled</span>
+                    </div>
+                </template>
+                <c-notify-Childcomponent></c-notify-Childcomponent>
+            </div>
+        </div>
+    </lightning-card>
+</template>

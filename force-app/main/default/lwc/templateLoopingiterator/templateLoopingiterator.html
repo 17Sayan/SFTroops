@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="iterator view" icon-name="custom:custom5">
+        <ul class="slds-m-around_medium" >
+            <div class="list-group-inline">
+                <template iterator:ceo={ceolist} >
+                    <div key={ceo.value.id}  >
+                        <a href="#" if:true={ceo.first} class="list-group-item list-group-item-action-header"><strong>List of companies and CEOs</strong></a>
+                        <a href="#"  class="list-group-item list-group-item-action"> {ceo.value.company}:{ceo.value.Owner}</a>
+                        <a href="#" if:true={ceo.last} class="list-group-item list-group-item-action-footer"><strong>Salesforce@2020 records</strong></a>
+                    </div>
+                
+                </template>
+            </div>
+        </ul>
+    </lightning-card>
+</template>
