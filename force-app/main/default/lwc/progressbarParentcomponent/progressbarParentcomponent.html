@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="parent2child event trigger">
+        <div class="slds-m-around_medium">
+            <div class="parent-wrapper">
+                <h2>Parent Component</h2>
+                <div class="field">
+                    <label for="name">enter your percentage</label>
+                    <input id="percentage" type="number" min="0" max="100" name="pecentage" onkeyup={changeHandler} value={percentage}/>
+                </div>
+                <div class="child-wrapper">
+                    <h2> child component</h2>
+                    <c-progressbar-childcomponent percentage={percentage}></c-progressbar-childcomponent>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="iftruedemo">
+        <div class="slds-m-around_medium">
+            <button class="slds-button slds-button_success" onclick={showhandler}>Click to view text</button>
+                <template if:true={showtext}> 
+                    <h3> Hurray!!text is visible</h3>
+                </template>
+        </div>
+    </lightning-card>
+    <lightning-card title="iffalsedemo">
+        <div class="slds-m-around_medium">
+            <button class="slds-button slds-button_success" onclick={showhandler1}>Click to hide text</button>
+                <template if:true={hidetext}> 
+                    <h3> Hurray!!text to hide</h3>
+                </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="iffalsedemo2">
+        <div class="slds-m-around_medium">
+            <button class="slds-button slds-button_success" onclick={showhandler2}>Click to hide text</button>
+                <template if:false={hide1text.result}> 
+                    <h3> Hurray!!text to hide</h3>
+                </template>
+        </div>
+    </lightning-card>
+</template>

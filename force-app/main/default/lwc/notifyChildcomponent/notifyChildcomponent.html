@@ -1,0 +1,12 @@
+<template>
+    <div class="child-section">
+        <template if:true={showChildNotification}>
+            <div class="notificationbox">
+                <span>notification in child component ,event bubbled till parent</span>
+            </div>
+        </template>
+            <div class="content" onclick={clickHandler}>
+                <button class="button" onclick={notifyParentHandler}>Send Notification to Parent Component</button>
+            </div>
+    </div>
+</template>

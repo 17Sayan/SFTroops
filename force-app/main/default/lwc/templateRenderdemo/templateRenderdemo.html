@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="conditional render demo event trigger">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" name="title" label="enter name" onkeyup={changehandler} value={inputtext}></lightning-input>
+        </div>
+            <template if:true={checktext} >
+                <h3>Hello Salesforce Troops</h3>
+            </template>
+        </lightning-card>
+</template>
